@@ -9,9 +9,11 @@ import {
   SettingsOutlined as SettingsIcon,
   ListAlt as ListIcon,
   CreditCard as BillingIcon,
+  People as PeopleIcon
 } from '@mui/icons-material';
 
 import { Home } from '../pages/Home';
+import { Preferences } from '../pages/Preferences';
 
 import { Route } from '../types/Route';
 
@@ -91,6 +93,7 @@ const routes: Array<Route> = [
         path: '/account/preferences',
         isEnabled: true,
         icon: ListIcon,
+        component: Preferences
       },
       {
         key: 'router-billing',

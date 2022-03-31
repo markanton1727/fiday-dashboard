@@ -26,7 +26,7 @@ function App() {
   );
 
   const theme = useMemo(() => getAppTheme(mode), [mode]);
-
+ console.log('console.log()', )
   const addRoute = (route: AppRoute) => (
     <Route key={route.key} path={route.path} component={route.component || PageDefault} exact />
   );

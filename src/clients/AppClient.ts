@@ -19,6 +19,7 @@ class AppClient implements IAppContext {
       isAdmin: true,
       isActive: true,
       isVerified: true,
+      timeZone: 'Africa/Asmera'
     };
   }
 }

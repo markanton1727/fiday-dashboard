@@ -117,4 +117,6 @@ export type User = {
    * false
    */
   isVerified: boolean;
+
+  timeZone: string;
 };
