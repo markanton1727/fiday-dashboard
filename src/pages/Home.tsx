@@ -6,6 +6,7 @@ import logo from '../logo.svg';
 
 import { AppContext } from '../contexts';
 import { APP_TITLE, PAGE_TITLE_HOME } from '../utils/constants';
+import { Counter } from '../components/Counter';
 
 export const Home = () => {
   const context = useContext(AppContext);
@@ -18,6 +19,7 @@ export const Home = () => {
         </title>
       </Helmet>
       <Typography variant="h4">{`Hello, ${context.user.name} 🎃`}</Typography>
+      <Counter />
       <LogoWrapper>
         <StyledLogo src={logo} alt="logo" />
       </LogoWrapper>
