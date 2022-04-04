@@ -12,6 +12,7 @@ import {
 } from '@mui/icons-material';
 
 import { Home } from '../pages/Home';
+import { ItemsPage } from '../pages/Items'
 
 import { Route } from '../types/Route';
 
@@ -33,6 +34,7 @@ const routes: Array<Route> = [
     path: '/dashboard',
     isEnabled: true,
     icon: DashboardIcon,
+    component: ItemsPage
   },
   {
     key: 'router-gh',
