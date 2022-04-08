@@ -16,9 +16,7 @@ class AppClient implements IAppContext {
       email: 'dwight.schrute@welcomedeveloper.com',
       createdAt: new Date(),
       updatedAt: new Date(),
-      isAdmin: true,
-      isActive: true,
-      isVerified: true,
+      role: 'admin'
     };
   }
 }
