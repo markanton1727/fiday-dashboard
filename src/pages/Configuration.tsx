@@ -1,8 +1,15 @@
-import React, { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { retrieveUsers } from "../features/usersSlice";
-import { User } from "../types/User";
 import { RootState } from '../core/store';
+import { DataGrid, GridColDef, GridValueGetterParams } from '@mui/x-data-grid';
+
+const columns: GridColDef[] = [
+  { field: 'id', headerName: 'ID', width: 70 },
+  { field: 'name', headerName: 'name', width: 130 },
+  { field: 'email', headerName: 'Email', width: 150 },
+  { field: 'created_at', headerName: 'CreatedAt', width: 150 }
+];
 
 export const UserList = () => {
   const dispatch = useDispatch();  
@@ -15,15 +22,11 @@ export const UserList = () => {
   if (loading) return <p>Loading...</p>;
   
   return (
-    <div>
-      { users && users.map((user: User) =>(
-        <div key={user.id}>
-          User Id: {user.id}
-          User Name: {user.name}
-          User Email: {user.email}
-          User createdAt: {user.created_at}
-        </div>
-      ))}
-    </div>
+    <DataGrid
+        rows={users}
+        columns={columns}
+        pageSize={5}
+        rowsPerPageOptions={[5]}
+      />
   );
 };
