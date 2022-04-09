@@ -14,7 +14,7 @@ class AppClient implements IAppContext {
       id: '5e8d8hg8h8h8q8faf8g8f8f',
       name: 'Dwight Schrute',
       email: 'dwight.schrute@welcomedeveloper.com',
-      createdAt: new Date(),
+      created_at: new Date(),
       updatedAt: new Date(),
       role: 'admin'
     };

@@ -55,7 +55,7 @@ export type User = {
    * @example
    * "2020-01-01T00:00:00.000Z"
    */
-  createdAt: Date;
+  created_at: Date;
 
   /**
    * The user's updated date
