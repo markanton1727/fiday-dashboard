@@ -55,7 +55,7 @@ export type User = {
    * @example
    * "2020-01-01T00:00:00.000Z"
    */
-  createdAt: Date;
+  created_at: Date;
 
   /**
    * The user's updated date
@@ -80,41 +80,15 @@ export type User = {
   deletedAt?: Date;
 
   /**
-   * The user's status
-   * @type {boolean}
-   * @memberof User
-   * @property status
-   * @required
-   * @example
-   * true
-   * @default
-   * true
-   */
-  isActive: boolean;
-
-  /**
    * The user's role
-   * @type {boolean}
+   * @type {string}
    * @memberof User
-   * @property isAdmin
+   * @property role
    * @required
    * @example
    * true
    * @default
    * false
    */
-  isAdmin: boolean;
-
-  /**
-   * The user's verification status
-   * @type {boolean}
-   * @memberof User
-   * @property isVerified
-   * @required
-   * @example
-   * true
-   * @default
-   * false
-   */
-  isVerified: boolean;
+  role: string;
 };
