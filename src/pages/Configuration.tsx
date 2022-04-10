@@ -1,32 +1,25 @@
-import { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { retrieveUsers } from "../features/usersSlice";
-import { RootState } from '../core/store';
-import { DataGrid, GridColDef, GridValueGetterParams } from '@mui/x-data-grid';
+import { styled, Typography } from '@mui/material';
+import { useContext } from 'react';
+import { Helmet } from 'react-helmet';
 
-const columns: GridColDef[] = [
-  { field: 'id', headerName: 'ID', width: 70 },
-  { field: 'name', headerName: 'name', width: 130 },
-  { field: 'email', headerName: 'Email', width: 150 },
-  { field: 'created_at', headerName: 'CreatedAt', width: 150 }
-];
+import logo from '../logo.svg';
 
-export const UserList = () => {
-  const dispatch = useDispatch();  
-  const { users, loading } = useSelector((state: RootState) => state.users)
+import { AppContext } from '../contexts';
+import { APP_TITLE, PAGE_TITLE_HOME } from '../utils/constants';
+import { UserList } from '../components/User/List';
 
-  useEffect(()=> {
-    dispatch(retrieveUsers());
-  }, [dispatch]);
+export const Configuration = () => {
+  const context = useContext(AppContext);
 
-  if (loading) return <p>Loading...</p>;
-  
   return (
-    <DataGrid
-        rows={users}
-        columns={columns}
-        pageSize={5}
-        rowsPerPageOptions={[5]}
-      />
+    <>
+      <Helmet>
+        <title>
+          {PAGE_TITLE_HOME} | {APP_TITLE}
+        </title>
+      </Helmet>
+      <Typography variant="h4">Configuración</Typography>
+      <UserList/>
+    </>
   );
 };

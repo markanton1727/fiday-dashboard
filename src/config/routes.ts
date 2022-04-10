@@ -12,7 +12,7 @@ import {
 } from '@mui/icons-material';
 
 import { Home } from '../pages/Home';
-import { UserList } from '../pages/Configuration';
+import { Configuration } from '../pages/Configuration';
 
 import { Route } from '../types/Route';
 
@@ -33,8 +33,7 @@ const routes: Array<Route> = [
     description: 'Dashboard',
     path: '/dashboard',
     isEnabled: true,
-    icon: DashboardIcon,
-    component: UserList
+    icon: DashboardIcon
   },
   {
     key: 'router-gh',
@@ -85,6 +84,7 @@ const routes: Array<Route> = [
         path: '/account/settings',
         isEnabled: true,
         icon: SettingsIcon,
+        component: Configuration
       },
       {
         key: 'router-preferences',
