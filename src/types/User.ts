@@ -4,14 +4,14 @@
 export type User = {
   /**
    * The user's unique identifier
-   * @type {string}
+   * @type {number}
    * @memberof User
    * @property id
    * @required
    * @example
-   * "5e8d8hg8h8h8q8faf8g8f8f"
+   * 1
    */
-  id: string;
+  id: number;
 
   /**
    * The user's name
@@ -51,22 +51,22 @@ export type User = {
    * @type {Date}
    * @memberof User
    * @property createdAt
-   * @required
+   * @optional
    * @example
    * "2020-01-01T00:00:00.000Z"
    */
-  created_at: Date;
+  created_at?: Date;
 
   /**
    * The user's updated date
    * @type {Date}
    * @memberof User
    * @property updatedAt
-   * @required
+   * @optional
    * @example
    * "2020-01-01T00:00:00.000Z"
    */
-  updatedAt: Date;
+  updatedAt?: Date;
 
   /**
    * The user's deleted date
@@ -91,4 +91,70 @@ export type User = {
    * false
    */
   role: string;
+
+  /**
+   * The user's logged status
+   * @type {boolean}
+   * @memberof User
+   * @property is_logged
+   * @optional
+   * @example
+   * false
+   * @default
+   * false
+   */
+   is_logged: boolean;
+
+  /**
+   * The user's fetching status
+   * @type {boolean}
+   * @memberof User
+   * @property is_fetching
+   * @optional
+   * @example
+   * false
+   * @default
+   * false
+   */
+  is_fetching: boolean;
+
+  /**
+   * The user's success status
+   * @type {boolean}
+   * @memberof User
+   * @property is_success
+   * @optional
+   * @example
+   * false
+   * @default
+   * false
+   */
+  is_success: boolean;
+
+  /**
+   * The user's error status
+   * @type {boolean}
+   * @memberof User
+   * @property is_error
+   * @optional
+   * @example
+   * false
+   * @default
+   * false
+   */
+  is_error: boolean;
+
+  /**
+   * The user's error message
+   * @type {string}
+   * @memberof User
+   * @property errorMessage
+   * @required
+   * @example
+   * true
+   * @default
+   * ""
+   */
+  error_message: string,
+  
 };

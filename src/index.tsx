@@ -3,11 +3,11 @@ import ReactDOM from 'react-dom';
 import { Helmet } from 'react-helmet';
 
 import App from './App';
+import { Provider } from "react-redux"
+import { store } from "./core/store"
 
 import reportWebVitals from './reportWebVitals';
 import { APP_TITLE, APP_DESCRIPTION } from './utils/constants';
-import { Provider } from "react-redux";
-import { store } from "./core/store";
 
 ReactDOM.render(
   <React.StrictMode>

@@ -11,12 +11,17 @@ class AppClient implements IAppContext {
    */
   constructor() {
     this.user = {
-      id: '5e8d8hg8h8h8q8faf8g8f8f',
+      id: 0,
       name: 'Dwight Schrute',
       email: 'dwight.schrute@welcomedeveloper.com',
       created_at: new Date(),
       updatedAt: new Date(),
-      role: 'admin'
+      role: 'admin',
+      is_logged: false,
+      is_fetching: false,
+      is_success: false,
+      is_error: false,
+      error_message: "",
     };
   }
 }

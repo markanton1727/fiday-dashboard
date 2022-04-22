@@ -13,6 +13,8 @@ import {
 
 import { Home } from '../pages/Home';
 import { UserList } from '../pages/Configuration';
+// import { Login } from '../pages/Login';
+import { Profile } from '../pages/Profile';
 
 import { Route } from '../types/Route';
 
@@ -35,6 +37,24 @@ const routes: Array<Route> = [
     isEnabled: true,
     icon: DashboardIcon,
     component: UserList
+  },
+  // {
+  //   key: 'router-login',
+  //   title: 'Login',
+  //   description: 'Login',
+  //   component: Login,
+  //   path: '/login',
+  //   isEnabled: true,
+  //   icon: DashboardIcon,
+  // },
+  {
+    key: 'router-profile',
+    title: 'Profile',
+    description: 'Profile',
+    component: Profile,
+    path: '/profile',
+    isEnabled: true,
+    icon: DashboardIcon,
   },
   {
     key: 'router-gh',
